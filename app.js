@@ -15,7 +15,35 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
+let posts = [];
 
+app.get('/',function(req,res) {
+    res.render("home",{
+      homeStartingContent:homeStartingContent,
+      posts:posts
+    });
+});
+
+app.get('/about',function(req,res) {
+  res.render("about",{aboutContent:aboutContent});
+});
+
+app.get('/contact',function(req,res) {
+  res.render("contact",{contactContent:contactContent});
+});
+
+app.get('/compose',function(req,res){
+  res.render("compose");
+});
+
+app.post('/compose',function(req,res) {
+  const post = {
+    title:req.body.newTitle, 
+    article:req.body.newArticle
+  };
+  posts.push(post);
+  res.redirect('/');
+});
 
 
 
