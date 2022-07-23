@@ -41,3 +41,10 @@
 .link:hover {
     color:#1a8bbc;
 }
+
+.truncate {
+    width: 550px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
