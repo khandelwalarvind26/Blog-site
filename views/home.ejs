@@ -7,8 +7,8 @@
 <% posts.forEach(function(post) { %>
     <% let s = post.article.substring(0,100); %>
     <% if(post.article.length > 100) s += "..."%>
-    <h2><a href = "/posts/<%=post.id%>" style = "color:#000"><%=post.title%></a></h2>
-    <p><%=s%><%if(post.article.length > 100) {%><a href = "/posts/<%=post.id%>">Read More</a> <%}%></p><hr>
+    <h2><a href = "/posts/<%=post.idd%>" style = "color:#000"><%=post.title%></a></h2>
+    <p><%=s%><%if(post.article.length > 100) {%><a href = "/posts/<%=post.idd%>">Read More</a> <%}%></p><hr>
 <% }); %>
 
 <%- include("partials/footer") -%>
