@@ -12,7 +12,7 @@ app.use(express.static("public"));
 
 
 //Connecting to database
-mongoose.connect('mongodb://localhost:27017/blogDB');
+mongoose.connect('mongodb+srv://arvind26:abc123d4@cluster0.xo3itmx.mongodb.net/blogDB');
 
 
 //Default string declarations
